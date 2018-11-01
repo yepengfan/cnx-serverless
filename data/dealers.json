@@ -1,0 +1,23 @@
+{
+  "Cadillac": {
+    "bac": "122345",
+    "name": "Cadillac",
+    "city": "Detriot",
+    "state": "WV",
+    "country": "US"
+  },
+  "Buick": {
+    "bac": "122346",
+    "name": "Buick",
+    "city": "Detriot",
+    "state": "WV",
+    "country": "US"
+  },
+  "GMC": {
+    "bac": "122347",
+    "name": "GMC",
+    "city": "Detriot",
+    "state": "WV",
+    "country": "US"
+  }
+}

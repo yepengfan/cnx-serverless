@@ -1,87 +1,43 @@
-# Project Title
+# Demo Vehicles
 
-One Paragraph of project description goes here
+In this code test, you are required to write a simple application including frontend and backend. 
 
-## Getting Started
+## Background
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+We are building a software that manages the vehicles for the dealers. 
+You will be able to get a list of dealers from an API GET method.
+Upon successfully retrieve the dealer list, the user should be able to select one of dealer brand to see the avalible vehicles that belong to the dealer on the frontend.
 
-### Prerequisites
+### Endpoints:
+- `GET - https://bb61co4l22.execute-api.us-west-2.amazonaws.com/development/dealers`
+for get list of dealers
 
-What things you need to install the software and how to install them
+- `GET - https://bb61co4l22.execute-api.us-west-2.amazonaws.com/development/vehicles/{bac}`
+for get vehicles under one dealer (you should be able to get the bac number from `/dealers` api)
 
-```
-Give examples
-```
 
-### Installing
+### Note:
+- 1 dealer can have multiple vehicles
+- 1 vehicle only belongs to 1 dealer, their brands has to match (e.g. Cadillac only have Cadillac vehicles, no Buick allowed)
+- each dealer has a unique bac code to identify themselves.
+- Not all the http requests will be successful (sometimes it will have 500 Internal Server error). You need to make sure the user experience is not compromised in those cases.
 
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+## Requirements:
+- git control
+- The frontend should be accessble through Internat
+- TDD development methodology
+- Communicate with us if you have any questions.
 
-```
-Give the example
-```
+## Hints:
+- Use bootstrap to quickly prototype the frontend
+- Having your own backend would be very beneficial when it comes to scaling and error handling
+- It would be so much easier if use a PaaS e.g. Heroku, AWS elasticbenstalk
+- Use as much of open source library as you can.
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+### Bonous points:
+- CICD process
+- Well structured code
+- Use of Cloud platforms (AWS is preferred)
+- Serverless / Microservice infrustructrue
+- Nodejs stack
