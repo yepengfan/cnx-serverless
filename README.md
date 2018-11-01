@@ -25,7 +25,7 @@ for get vehicles under one dealer (you should be able to get the bac number from
 
 ## Requirements:
 - git control
-- The frontend should be accessble through Internat
+- The frontend should be accessible through Internet
 - TDD development methodology
 - Communicate with us if you have any questions.
 
@@ -36,7 +36,7 @@ for get vehicles under one dealer (you should be able to get the bac number from
 - Use as much of open source library as you can.
 
 ### Bonous points:
-- CICD process
+- CI/CD process
 - Well structured code
 - Use of Cloud platforms (AWS is preferred)
 - Serverless / Microservice infrustructrue
