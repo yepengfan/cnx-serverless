@@ -1,23 +1,31 @@
-{
-  "Cadillac": {
+[
+  {
     "bac": "122345",
-    "name": "Cadillac",
+    "name": "Cadillac Detriot",
     "city": "Detriot",
     "state": "WV",
-    "country": "US"
-  },
-  "Buick": {
+    "country": "US",
+    "brand": "Cadillac"
+  }, {
     "bac": "122346",
-    "name": "Buick",
+    "name": "Buick Detriot",
     "city": "Detriot",
     "state": "WV",
-    "country": "US"
-  },
-  "GMC": {
+    "country": "US",
+    "brand": "Buick"
+  }, {
     "bac": "122347",
-    "name": "GMC",
+    "name": "GMC Detriot",
     "city": "Detriot",
     "state": "WV",
-    "country": "US"
+    "country": "US",
+    "brand": "GMC"
+  }, {
+    "bac": "122348",
+    "name": "Buick New York",
+    "city": "New York",
+    "state": "WV",
+    "country": "US",
+    "brand": "Buick"
   }
-}
+]
