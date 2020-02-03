@@ -39,6 +39,12 @@ describe('Get vehicles by bac', () => {
     expect(res).toEqual(fixtures.vehiclesRes);
   });
 
+  it('should only match bac and brandy', async () => {
+    mockUtil('roll', false);
+    const res = await getVehiclesByBac(fixtures.filterVehicleEvent);
+    expect(JSON.parse(res.body).length).toBe(0);
+  });
+
   it('should return error responses on failure', async () => {
     mockUtil('roll', true);
     const res = await getVehiclesByBac(fixtures.vehicleEvent);
