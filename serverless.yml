@@ -1,64 +1,25 @@
+service: cnx-dealers
 
-service: cnx-mid-fullstack-code-test # NOTE: update this with your service name
+package:
+  individually: true
+  exclude:
+    - .eslintrc.json
+    - .git/**
+    - .gitignore
+    - test/**
+
+plugins:
+  - serverless-bundle
+
 provider:
   name: aws
-  stage: ${env:STAGE}
-  region: us-west-2
-  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  region: ap-southeast-1
+  runtime: nodejs12.x
   timeout: 30
-  environment:
-plugins:
-  - serverless-offline
-  - serverless-dotenv-plugin
-custom:
-  serverless-offline:
-    port: 4001
-resources:
-  Resources:
-    ApiGatewayRestApi:
-      Type: AWS::ApiGateway::RestApi
-      Properties:
-        Name: '${self:service}-${self:provider.stage}-api'
-    CNXCodeTestRole:
-      Type: AWS::IAM::Role
-      Properties:
-        RoleName: ${self:service}-lambda-role-${self:provider.stage}
-        AssumeRolePolicyDocument:
-          Version: '2012-10-17'
-          Statement:
-            - Effect: Allow
-              Principal:
-                Service:
-                  - lambda.amazonaws.com
-              Action: sts:AssumeRole
-        Policies:
-          - PolicyName: ${self:service}-cloudwatch-policy-${self:provider.stage}
-            PolicyDocument:
-              Version: '2012-10-17'
-              Statement:
-                - Effect: Allow
-                  Action:
-                    - logs:CreateLogGroup
-                    - logs:CreateLogStream
-                    - logs:PutLogEvents
-                    - logs:DescribeLogGroups
-                    - logs:DescribeLogStreams
-                  Resource:
-                    - '*' 
+
 functions:
-  get-dealers:
-    handler: handler.getDealers
-    role: CNXCodeTestRole
-    events:
-      - http:
-          path: /dealers
-          method: get
-  get-vehicles-by-bac:
-    handler: handler.getVehiclesByBac
-    role: CNXCodeTestRole
-    events:
-      - http:
-          path: /vehicles/{bac}
-          method: get
-  
-    
+  - ${file(resources/functions/get-dealers.yml)}
+  - ${file(resources/functions/get-vehicles-by-bac.yml)}
+
+resources:
