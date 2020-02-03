@@ -1,0 +1,8 @@
+export default {
+  statusCode: 200,
+  body: '[{"bac":"122345","name":"Cadillac Detriot","city":"Detriot","state":"WV","country":"US","brand":"Cadillac"},{"bac":"122346","name":"Buick Detriot","city":"Detriot","state":"WV","country":"US","brand":"Buick"},{"bac":"122347","name":"GMC Detriot","city":"Detriot","state":"WV","country":"US","brand":"GMC"},{"bac":"122348","name":"Buick New York","city":"New York","state":"WV","country":"US","brand":"Buick"}]',
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Credentials': true
+  }
+}
