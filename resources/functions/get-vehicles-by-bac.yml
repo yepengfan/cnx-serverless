@@ -1,0 +1,7 @@
+get-vehicles-by-bac:
+  handler: handler.getVehiclesByBac
+  events:
+    - http:
+      path: /vehicles/{bac}
+      method: get
+      cors: true
