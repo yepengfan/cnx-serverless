@@ -1,7 +1,7 @@
 get-dealers:
-  handler: handler.getDealers
+  handler: src/handler.getDealers
   events:
     - http:
-      path: /dealers
-      method: get
-      cors: true
+        path: /dealers
+        method: get
+        cors: true
