@@ -1,10 +1,11 @@
 {
-  "name": "cnx-mid-fullstack-code-test",
+  "name": "cnx-dealers",
   "version": "1.0.0",
   "description": "One Paragraph of project description goes here",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ./src/*.js ./tests/*.js ./tests/fixtures/*.js",
+    "test": "serverless-bundle test",
     "offline": "STAGE=development DEBUG=* SLS_DEBUG=* serverless offline start --skipCacheInvalidation",
     "deploy": "STAGE=development serverless deploy -v"
   },
@@ -13,7 +14,12 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "serverless": "^1.30.3",
-    "serverless-dotenv-plugin": "^1.2.0",
+    "serverless-bundle": "^1.2.5",
     "serverless-offline": "^3.25.10"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "jest": "^25.1.0"
   }
 }
