@@ -6,7 +6,7 @@ package:
     - .eslintrc.json
     - .git/**
     - .gitignore
-    - test/**
+    - tests/**
 
 plugins:
   - serverless-bundle

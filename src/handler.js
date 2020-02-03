@@ -2,9 +2,9 @@ import dealers from '../data/dealers.json';
 import vehicles from '../data/vehicles.json';
 import Responses from './responses';
 import Util from '../src/util';
-import { find } from 'lodash';
+import { filter } from 'lodash';
 
-export function getDealers () {
+export async function getDealers() {
   try {
     return Util.roll() ? Responses.error() : Responses.success(dealers);
   } catch (err) {
@@ -12,10 +12,10 @@ export function getDealers () {
   }
 } 
 
-export function getVehiclesByBac (event) {
+export async function getVehiclesByBac(event) {
   try {
     const { bac } = event.pathParameters
-    const vehiclesPerBac = find(vehicles, {bac: bac})
+    const vehiclesPerBac = filter(vehicles, {bac: bac})
 
     return Util.roll() ? Responses.error() : Responses.success(vehiclesPerBac);
   } catch (err) {

@@ -12,6 +12,7 @@ describe('Get dealers', () => {
   });
 
   it('should return a list of dealers on success', async () => {
+    mockUtil('roll', false);
     const res = await getDealers();
     expect(res).toEqual(fixtures.dealersRes);
   });
@@ -33,8 +34,9 @@ describe('Get vehicles by bac', () => {
   });
 
   it('should return a list of vehicles by a given bac on success', async () => {
+    mockUtil('roll', false);
     const res = await getVehiclesByBac(fixtures.vehicleEvent);
-    expect(res).toEqual(res);
+    expect(res).toEqual(fixtures.vehiclesRes);
   });
 
   it('should return error responses on failure', async () => {
