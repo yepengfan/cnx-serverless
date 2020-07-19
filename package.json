@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "serverless": "^1.30.3",
     "serverless-bundle": "^1.2.5",
     "serverless-offline": "^3.25.10"
